@@ -89,7 +89,7 @@ export class App implements OnDestroy, OnInit {
   }
 
   private loadWords() {
-    this.http.get<WordsData>('/words.json').subscribe({
+    this.http.get<WordsData>('./words.json').subscribe({
       next: (data) => {
         this.wordList = data.words;
         this.generateRandomText();
